@@ -41,7 +41,7 @@ export default function Home() {
       title: 'CSS Shapes',
       description: 'How to construct impossible shapes with just CSS',
       tag: 'Cheatsheet',
-      href: 'https://cssshapes.com'
+      href: 'https://css-tricks.com/the-shapes-of-css/'
     },
 
     {

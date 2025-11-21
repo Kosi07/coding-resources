@@ -1,13 +1,17 @@
 import Footer from '@/components/Footer';
 
 const Page = () => {
-  function YTVideo({ href, title, summary }:{href: string, title: string, summary: string}){
+  function YTVideo({ src, title, summary }:{src: string, title: string, summary: string}){
     return(
       <div className='flex flex-col'>
-        <a href={href} target='_blank'>
-          <img src='public/batman.png' alt='?'/>
-        </a>
-        <div>
+        <iframe width='427' height='250'
+          src={src} 
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' 
+          referrerPolicy='strict-origin-when-cross-origin' 
+          allowFullScreen 
+          className='p-2'
+        />
+        <div className='p-2'>
           <div className='font-bold text-lg'>{title}</div>
           <div className='text-gray-600'>{summary}</div>
         </div>
@@ -23,11 +27,11 @@ const Page = () => {
       </header>
 
       <main className='bg-gray-100/30 rounded-lg flex flex-col gap-8'>
-        <YTVideo href='' title="CodeWithAnia's HTML + CSS + JS video" summary='summary' /> 
+        <YTVideo src='https://www.youtube.com/embed/cndko2lx-_Y?si=jnpQqMDBj4erf79L&amp;start=602' title="CodeWithAnia's HTML + CSS + JS video" summary='summary' /> 
 
-        <div>OR</div>
+        <div className='w-full p-2 text-center text-lg font-bold'>OR</div>
 
-        <YTVideo href='' title="BroCode's HTML + CSS video" summary='summary' />
+        <YTVideo src='https://www.youtube.com/embed/HD13eq_Pmp8?si=QNkXSUgm256L9CRW' title="BroCode's HTML video" summary='summary' />
       </main>
 
       <Footer />
