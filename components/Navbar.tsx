@@ -20,7 +20,7 @@ const Navbar = ({ setOpenAside }:{setOpenAside: Dispatch<SetStateAction<boolean>
   }
 
   return (
-    <nav className='backdrop-blur-lg p-1 rounded-lg'>
+    <nav className='backdrop-blur-lg rounded-lg'>
         <HamburgerIcon color='text-gray-700' />
     </nav>
   )

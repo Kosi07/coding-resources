@@ -1,1 +1,1 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a wesite listing the most useful [Coding Resources](https://coding-resources-pond.vercel.app) based on my personal experience and the advice of other professionals.

@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import H1 from "@/components/H1";
+import InteractiveHeader from "@/components/InteractiveHeader";
 import Tech from "@/components/Tech";
 import TechUsed from "@/components/TechUsed";
 
@@ -21,7 +22,7 @@ export default function Home() {
       title: 'HTML Cheatsheet',
       description: 'Quick reference to the most commonly used HTML tags',
       tag: 'Cheatsheet',
-      href: ''
+      href: 'https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf'
     },
   ]
 
@@ -67,13 +68,15 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <InteractiveHeader />
 
-      <div className='flex flex-col gap-2'>
-        <h1 className='text-4xl font-bold mb-2'>Coding Resources</h1>
-        <span className='text-xl text-gray-600'>Curated collection of tutorials, cheatsheets, and guides</span>
-        <div className='text-sm text-gray-700'>* These are actual resources I regularly use btw ;)</div>
-      </div>
+      <header>
+        <div className='flex flex-col gap-2'>
+          <H1 />
+          <span className='text-xl text-gray-600'>Curated collection of tutorials, cheatsheets, and guides</span>
+          <div className='text-sm text-gray-700'>* These are actual resources I regularly use btw ;)</div>
+        </div>
+      </header>
 
       <main className='border-t border-b border-gray-400/60 rounded-lg p-4 bg-gray-100/30 flex flex-col gap-8'>
         <div className='w-full'>

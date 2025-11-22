@@ -1,15 +1,16 @@
+//Isolate all interactive parts of the header into one component
 'use client';
 
-import Link from "next/link"
+import Link from 'next/link';
 
-import Navbar from "./Navbar"
-import { useState } from "react"
+import Navbar from './Navbar';
+import { useState } from 'react';
 
-const Header = () => {
+const InteractiveHeader = () => {
     const [openAside, setOpenAside] = useState(false);
 
   return (
-    <header className='sticky top-0.5 rounded-lg p-1'>
+    <div className='sticky top-0.5 rounded-lg p-1'>
         <Navbar setOpenAside={setOpenAside}/>
 
         <aside className={`w-1/2 min-w-[250px] fixed top-0 bottom-0 left-0 z-20 bg-gray-100 p-2 rounded-sm
@@ -43,8 +44,8 @@ const Header = () => {
             onClick={()=>setOpenAside(false)}
         >
         </div>
-    </header>
+    </div>
   )
 }
 
-export default Header
+export default InteractiveHeader

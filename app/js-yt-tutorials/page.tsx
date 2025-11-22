@@ -24,15 +24,15 @@ const Page = () => {
     <>
       <header>
         <H1 />
-        <p className='text-xl text-gray-600'>The bare minimum videos to get started with HTML</p>
+        <p className='text-xl text-gray-600'>The bare minimum videos to get started with JavaScript</p>
       </header>
 
       <main className='bg-gray-100/30 rounded-lg flex flex-col gap-8'>
-        <YTVideo src='https://www.youtube.com/embed/cndko2lx-_Y?si=jnpQqMDBj4erf79L&amp;start=602' title="@codeWithAnia's HTML + CSS + JS video" summary='summary' /> 
+        <YTVideo src='https://www.youtube.com/embed/cndko2lx-_Y?si=KzAhJXx2ZrOp7L-B&amp;start=31881' title="@codeWithAnia's HTML + CSS + JS video" summary='summary' /> 
 
         <div className='w-full p-2 text-center text-lg font-bold'>OR</div>
 
-        <YTVideo src='https://www.youtube.com/embed/HD13eq_Pmp8?si=QNkXSUgm256L9CRW' title="@BroCode's HTML video" summary='summary' />
+        <YTVideo src='https://www.youtube.com/embed/lfmg-EJ8gm4?si=1ROhc0p_bSTh3PFd' title="@BroCode's JS video" summary='summary' />
       </main>
 
       <Footer />
