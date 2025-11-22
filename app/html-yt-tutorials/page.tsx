@@ -1,8 +1,7 @@
 import Footer from '@/components/Footer';
 import H1 from '@/components/H1';
 
-const Page = () => {
-  function YTVideo({ src, title, summary }:{src: string, title: string, summary: string}){
+function YTVideo({ src, title, summary }:{src: string, title: string, summary: string}){
     return(
       <div className='flex flex-col'>
         <iframe width='427' height='250'
@@ -20,6 +19,8 @@ const Page = () => {
     )
   }
 
+const Page = () => {
+  
   return (
     <>
       <header>
@@ -33,6 +34,10 @@ const Page = () => {
         <div className='w-full p-2 text-center text-lg font-bold'>OR</div>
 
         <YTVideo src='https://www.youtube.com/embed/HD13eq_Pmp8?si=QNkXSUgm256L9CRW' title="@BroCode's HTML video" summary='summary' />
+
+        <div className='w-full p-2 text-center text-lg font-bold'>OR</div>
+
+        <YTVideo src='https://www.youtube.com/embed/FQdaUv95mR8?si=WHZhOxWxM3LhJzSa' title="@Kevin's HTML video" summary='summary' />
       </main>
 
       <Footer />

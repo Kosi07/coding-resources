@@ -1,4 +1,4 @@
-//Isolate all interactive parts of the header into one component
+//Isolate interactive parts into one component
 'use client';
 
 import Link from 'next/link';
@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Navbar from './Navbar';
 import { useState } from 'react';
 
-const InteractiveHeader = () => {
+const Navigation = () => {
     const [openAside, setOpenAside] = useState(false);
 
   return (
@@ -48,4 +48,4 @@ const InteractiveHeader = () => {
   )
 }
 
-export default InteractiveHeader
+export default Navigation

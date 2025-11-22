@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer";
 import H1 from "@/components/H1";
-import InteractiveHeader from "@/components/InteractiveHeader";
+import Navigation from "@/components/Navigation";
 import Tech from "@/components/Tech";
 import TechUsed from "@/components/TechUsed";
 
@@ -68,7 +68,7 @@ export default function Home() {
 
   return (
     <>
-      <InteractiveHeader />
+      <Navigation />
 
       <header>
         <div className='flex flex-col gap-2'>
