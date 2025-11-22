@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'Coding Resources',
     images: [
       {
-        url: 'https://coding-resources-pond.vercel.app/assets/opengraph.jpeg',
+        url: 'https://coding-resources-pond.vercel.app/opengraph.jpeg',
         width: 2672,
         height: 2090,
       },
