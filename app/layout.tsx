@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://coding-resources-pond.vercel.app/opengraph.jpeg',
-        width: 2672,
-        height: 2090,
+        width: 1200,
+        height: 630,
       },
     ]
   },
