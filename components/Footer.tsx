@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer>
         {Date().slice(0, 10)}
-        <div className='underline'>Message me</div>
+        <a href='https://wa.me/message/UGCMVOIZSDDED1' className='underline block'>Message me</a>
     </footer>
   )
 }
