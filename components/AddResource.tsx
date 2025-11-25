@@ -110,6 +110,7 @@ const AddResource = () => {
                     className='flex flex-row justify-between p-1'
                 >
                     <button 
+                        type='button'
                         className='w-9/20 border-[0.4px] rounded-lg p-1 font-semibold text-slate-700
                                     hover:cursor-pointer hover:scale-102 
                                 active:scale-103 duration-100 ease-out'
