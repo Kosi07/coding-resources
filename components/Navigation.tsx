@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import Navbar from './Navbar';
 import { useState } from 'react';
+import Overlay from './Overlay';
 
 const Navigation = () => {
     const [openAside, setOpenAside] = useState(false);
@@ -38,12 +39,7 @@ const Navigation = () => {
             </div>
         </aside>
 
-        <div id='overlay'
-            className={`fixed inset-0 z-10 bg-gray-400/60
-                        ${openAside? '':'hidden'}`}
-            onClick={()=>setOpenAside(false)}
-        >
-        </div>
+        <Overlay statefulVar={openAside} func={setOpenAside} />
     </div>
   )
 }

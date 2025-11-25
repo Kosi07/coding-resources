@@ -2,3 +2,5 @@ This is a wesite listing the most useful [Coding Resources](https://coding-resou
 
 # To-Do
 [ ] - Want to add your own resource? (Requires auth and database setup)
+
+[ ] - Abstract overlay into <Overlay var={} func={}/>

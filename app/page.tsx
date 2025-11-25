@@ -1,3 +1,4 @@
+import AddResource from "@/components/AddResource";
 import Footer from "@/components/Footer";
 import H1 from "@/components/H1";
 import Navigation from "@/components/Navigation";
@@ -77,6 +78,8 @@ export default function Home() {
           <div className='text-sm text-gray-700'>* These are actual resources I regularly use btw ;)</div>
         </div>
       </header>
+
+      <AddResource />
 
       <main className='border-t border-b border-gray-400/60 rounded-lg p-4 bg-gray-100/30 flex flex-col gap-8'>
         <div className='w-full'>

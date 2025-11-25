@@ -1,13 +1,11 @@
 import { Dispatch, SetStateAction } from "react";
 
-const Navbar = ({ setOpenAside }:{setOpenAside: Dispatch<SetStateAction<boolean>>}) => {
-
-    function HamburgerIcon({ color } : {color: String}){
+function HamburgerIcon({ color, handleClick } : {color: string, handleClick: Dispatch<SetStateAction<boolean>>}){
     return(
       <svg 
         className={`w-10 h-9/10 ${color} 
                     hover:cursor-pointer hover:text-indigo-600 active:text-indigo-400 duration-100`}
-        onClick={()=>setOpenAside(true)}
+        onClick={()=>handleClick(true)}
         viewBox='0 0 24 24' 
         fill='none' 
         stroke='currentColor'
@@ -19,9 +17,11 @@ const Navbar = ({ setOpenAside }:{setOpenAside: Dispatch<SetStateAction<boolean>
     )
   }
 
+const Navbar = ({ setOpenAside }:{setOpenAside: Dispatch<SetStateAction<boolean>>}) => {
+
   return (
     <nav className='backdrop-blur-lg rounded-lg'>
-        <HamburgerIcon color='text-gray-700' />
+        <HamburgerIcon color='text-gray-700' handleClick={setOpenAside} />
     </nav>
   )
 }
