@@ -26,7 +26,7 @@ const AddResource = () => {
                 </span>
 
                 <>
-                    <span className='gradient-animation group-hover: bg-size-[200%_100%] group-hover:text-2xl duration-200 ease-in font-extrabold text-transparent bg-clip-text bg-linear-to-r from-pink-500 via-yellow-400 to-purple-500'>
+                    <span className='animate-gradient bg-size-[200%_100%] group-hover:text-2xl duration-200 ease-in font-extrabold text-transparent bg-clip-text bg-linear-to-r from-pink-500 via-yellow-400 to-purple-500'>
                         &nbsp;Add yours
                     </span>
 
