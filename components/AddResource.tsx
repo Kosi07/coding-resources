@@ -53,9 +53,10 @@ const AddResource = () => {
 
         <div className={`w-12/13 flex flex-row justify-center
                         fixed top-20 z-30
-                        ${openForm? '' : 'hidden'} `}>
+                        ${openForm? '' : 'opacity-0 pointer-events-none'} `}>
 
-            <form className='w-6/10 min-w-[330px] bg-white p-5 rounded-lg flex flex-col gap-6'>
+            <form className={`w-6/10 min-w-[330px] bg-white p-5 rounded-lg flex flex-col gap-6
+                            ${openForm? 'scale-100' : 'scale-80'} duration-200 ease-out`}>
                 <h2 className='text-2xl font-extrabold'>Share a Resource</h2>
 
                 <div id='form-inputs' className='[&>label]:block flex flex-col gap-5'>
