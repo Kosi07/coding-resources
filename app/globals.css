@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.group:hover .gradient-animation{
+    animation-play-state: running;
+}
