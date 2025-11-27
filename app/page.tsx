@@ -13,8 +13,8 @@ export default function Home() {
       icon: '▶️',
       title: 'YouTube Tutorials',
       description: 'Curated list of HTML tutorials on YouTube',
-      tag: 'Video',
-      href: '/html-yt-tutorials'
+      tag: 'YouTube',
+      href: '/yt/html'
     },
 
     {
@@ -33,8 +33,8 @@ export default function Home() {
       icon: '▶️',
       title: 'YouTube Tutorials',
       description: 'Curated list of CSS tutorials on YouTube',
-      tag: 'Video',
-      href: '/css-yt-tutorials'
+      tag: 'YouTube',
+      href: '/yt/css'
     },
 
     {
@@ -62,8 +62,8 @@ export default function Home() {
       icon: '▶️',
       title: 'YouTube Tutorials',
       description: 'Curated list of JavaScript tutorials on YouTube',
-      tag: 'Video',
-      href: '/js-yt-tutorials'
+      tag: 'YouTube',
+      href: '/yt/js'
     },
   ]
 

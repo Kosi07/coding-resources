@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Navbar from './Navbar';
 import { useState } from 'react';
 import Overlay from './Overlay';
+import SignInBtn from './SignInBtn';
 
 const Navigation = () => {
     const [openAside, setOpenAside] = useState(false);
@@ -37,6 +38,8 @@ const Navigation = () => {
                 
                 <Link href='#nextjs' onClick={()=>setOpenAside(false)}>NextJS</Link>
             </div>
+
+            <SignInBtn />
         </aside>
 
         <Overlay statefulVar={openAside} func={setOpenAside} />
