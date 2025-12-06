@@ -12,7 +12,7 @@ const AddResourceForm = ({openForm, setOpenForm} : {
     }
 
   return (
-    <form className={`w-6/10 min-w-[330px] bg-white p-5 rounded-lg flex flex-col gap-6
+    <form className={`w-6/10 min-w-[330px] bg-white p-5 rounded-lg flex flex-col gap-6 md:px-13 md:py-6 
                             ${openForm? 'scale-100' : 'scale-80 opacity-0'} duration-150 ease-out`}>
                 <h2 className='text-2xl font-extrabold'>Share a Resource</h2>
 
