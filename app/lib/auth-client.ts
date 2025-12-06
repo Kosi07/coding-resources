@@ -4,9 +4,14 @@ import { createAuthClient } from "better-auth/client"
 export const authClient = createAuthClient()
 
 export const signInWithGoogle = async () => {
-  await authClient.signIn.social({
-    provider: "google",
-  })
+  try{
+    await authClient.signIn.social({
+      provider: "google",
+    })
+  }
+  catch(err){
+    console.error('Signin Error', err);
+  }
 }
 
 export const signOut = async () => {

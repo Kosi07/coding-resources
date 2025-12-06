@@ -49,6 +49,13 @@ const AddResourceForm = ({openForm, setOpenForm} : {
                     </div>
 
                     <div>
+                        <label htmlFor='emoji' className='block font-semibold text-slate-700 text-sm'>Emoji</label>
+                        <input id='emoji' type='text' placeholder='😊' 
+                            className='text-center w-5/10 bg-gray-50 border-[0.2px] rounded-lg border-gray-600 p-2'
+                        />
+                    </div>
+
+                    <div>
                         <label htmlFor='url' className='block font-semibold text-slate-700 text-sm'>URL</label>
                         <input id='url' type='text' placeholder='https://example.com' 
                             className='w-7/10 bg-gray-50 border-[0.2px] rounded-lg border-gray-600 p-2'
