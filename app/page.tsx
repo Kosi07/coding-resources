@@ -5,8 +5,6 @@ import Navigation from "@/components/Navigation";
 import Tech from "@/components/Tech";
 import TechUsed from "@/components/TechUsed";
 
-import cachedDB from "./lib/db";
-
 export default function Home() {
 
   const htmlResource = [
@@ -68,12 +66,6 @@ export default function Home() {
       href: '/yt/js'
     },
   ]
-
-  if(cachedDB){
-    const resources = cachedDB.resources.find();
-    console.log(resources)
-  }
-  console.log('cachedDB', cachedDB)
 
   return (
     <>
