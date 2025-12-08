@@ -32,7 +32,7 @@ export default async function Home() {
       .find({ topic: 'js' })
       .toArray() as unknown as Resource[];
   }
-  catch(err){console.error(err)}
+  catch(err){console.error('Cannot connect to MongoDB', err)}
 
   return (
     <>

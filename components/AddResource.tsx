@@ -16,7 +16,7 @@ const AddResource = () => {
         </div>
 
         <div className={`w-12/13 flex flex-row justify-center
-                        fixed top-20 z-30
+                        fixed top-8 z-30
                         ${openForm? '' : 'opacity-0 pointer-events-none'} duration-200 ease-out`}
         >
 

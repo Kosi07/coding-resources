@@ -1,15 +1,15 @@
 'use client';
 
-import { signInWithGoogle } from "@/app/lib/auth-client";
+import Link from "next/link";
 
 const SignInBtn = () => {
   return (
-    <button
-    className='p-2 border rounded-lg'
-        onClick={()=> signInWithGoogle()}
+    <Link
+     href='/sign-in'
+    className='mt-4 p-2 border rounded-lg'
     >
         SignIn with Google
-    </button>
+    </Link>
   )
 }
 
