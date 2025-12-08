@@ -1,12 +1,20 @@
-import { Dispatch, FormEvent, SetStateAction } from "react";
+import { Dispatch, FormEvent, SetStateAction, useState } from "react";
 
 const AddResourceForm = ({openForm, setOpenForm} : {
     openForm: boolean,
     setOpenForm: Dispatch<SetStateAction<boolean>>,
 }) => {
+    const [title, setTitle] = useState('')
+    const [category, setCategory] = useState('HTML')
+    const [tag, setTag] = useState('Video')
+    const [icon, setIcon] = useState('')
+    const [href, setHref] = useState('')
+    const [description, setDescription] = useState('')
+
     const handleSubmit = (e:FormEvent<HTMLButtonElement>) => {
         e.preventDefault();
         console.log('Form submitted!');
+        console.log()
 
         setOpenForm(false);
     }
@@ -21,13 +29,18 @@ const AddResourceForm = ({openForm, setOpenForm} : {
                         <label htmlFor='title' className='block font-semibold text-slate-700 text-sm'>Title</label>
                         <input id='title' type='text' placeholder='e.g; JavaScript Cheatsheet' 
                             className='w-7/10 bg-gray-50 border-[0.2px] rounded-lg border-gray-600 p-2'
+                            value={title}
+                            onChange={(e)=>setTitle(e.target.value)}
                         />
                     </div>
 
                     <div className='flex flex-row justify-between flex-wrap'>
                         <div className='mb-2'>
                             <label htmlFor='category' className='font-semibold text-slate-700 text-sm mr-4'>Category</label>
-                            <select id='category' className='bg-gray-50 border-[0.2px] rounded-lg p-2'>
+                            <select id='category' className='bg-gray-50 border-[0.2px] rounded-lg p-2'
+                                value={category}
+                                onChange={(e)=>setCategory(e.target.value)}
+                            >
                                 <option>HTML</option>
                                 <option>CSS & Styling</option>
                                 <option>JS</option>
@@ -38,7 +51,10 @@ const AddResourceForm = ({openForm, setOpenForm} : {
 
                         <div>
                             <label htmlFor='tag' className='font-semibold text-slate-700 text-sm mr-4'>Tag</label>
-                            <select id='tag' className='bg-gray-50 border-[0.2px] rounded-lg p-2'>
+                            <select id='tag' className='bg-gray-50 border-[0.2px] rounded-lg p-2'
+                                value={tag}
+                                onChange={(e)=>setTag(e.target.value)}
+                            >
                                 <option>Video</option>
                                 <option>Blog-post</option>
                                 <option>Documentation</option>
@@ -52,6 +68,8 @@ const AddResourceForm = ({openForm, setOpenForm} : {
                         <label htmlFor='emoji' className='block font-semibold text-slate-700 text-sm'>Emoji</label>
                         <input id='emoji' type='text' placeholder='😊' 
                             className='text-center w-5/10 bg-gray-50 border-[0.2px] rounded-lg border-gray-600 p-2'
+                            value={icon}
+                            onChange={(e)=>setIcon(e.target.value)}
                         />
                     </div>
 
@@ -59,6 +77,8 @@ const AddResourceForm = ({openForm, setOpenForm} : {
                         <label htmlFor='url' className='block font-semibold text-slate-700 text-sm'>URL</label>
                         <input id='url' type='text' placeholder='https://example.com' 
                             className='w-7/10 bg-gray-50 border-[0.2px] rounded-lg border-gray-600 p-2'
+                            value={href}
+                            onChange={(e)=>setHref(e.target.value)}
                         />
                     </div>
 
@@ -66,6 +86,8 @@ const AddResourceForm = ({openForm, setOpenForm} : {
                         <label htmlFor='description' className='block font-semibold text-slate-700 text-sm'>Description</label>
                         <input id='description' type='text' placeholder='Brief description' 
                             className='w-7/10 bg-gray-50 border-[0.2px] rounded-lg border-gray-600 p-2'
+                            value={description}
+                            onChange={(e)=>setDescription(e.target.value)}
                         />
                     </div>
                 </div>

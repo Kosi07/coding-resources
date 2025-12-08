@@ -8,23 +8,31 @@ import { MongoClient } from "mongodb";
 
 export default async function Home() {
 
+  let htmlResource
+  let cssResource
+  let jsResource
+
   //Connect to MongoDB
   const client = new MongoClient(process.env.MONGO_DB_URI as string);
-  await client.connect();
-  const db = client.db();
+  try{
+    await client.connect()
 
-  const htmlResource = await db.collection('resources')
-    .find({ topic: 'html' })
-    .toArray() as unknown as Resource[];
+    const db = client.db();
+
+    htmlResource = await db.collection('resources')
+      .find({ topic: 'html' })
+      .toArray() as unknown as Resource[];
 
 
-  const cssResource = await db.collection('resources')
-    .find({ topic: 'css' })
-    .toArray() as unknown as Resource[];
+    cssResource = await db.collection('resources')
+      .find({ topic: 'css' })
+      .toArray() as unknown as Resource[];
 
-  const jsResource = await db.collection('resources')
-    .find({ topic: 'js' })
-    .toArray() as unknown as Resource[];
+    jsResource = await db.collection('resources')
+      .find({ topic: 'js' })
+      .toArray() as unknown as Resource[];
+  }
+  catch(err){console.error(err)}
 
   return (
     <>
