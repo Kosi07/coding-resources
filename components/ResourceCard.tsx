@@ -1,6 +1,6 @@
 
 const ResourceCard = ({ icon, title, description, tag, href } :
-    {icon:string, title: String, description: String, tag: String, href: string}
+    {icon:string, title: string, description: string, tag: string, href: string}
 ) => {
   return (
     <a href={href} target={href.startsWith('https')? '_blank': ''} className='flex flex-col gap-3 w-full min-w-[200px] max-w-[400px] p-4 border-[0.5px] border-gray-900/50 rounded-lg bg-white

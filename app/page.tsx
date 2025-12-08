@@ -2,70 +2,29 @@ import AddResource from "@/components/AddResource";
 import Footer from "@/components/Footer";
 import H1 from "@/components/H1";
 import Navigation from "@/components/Navigation";
-import Tech from "@/components/Tech";
+import Tech, { Resource } from "@/components/Tech";
 import TechUsed from "@/components/TechUsed";
+import { MongoClient } from "mongodb";
 
-export default function Home() {
+export default async function Home() {
 
-  const htmlResource = [
-    {
-      id: 'html1',
-      icon: '▶️',
-      title: 'YouTube Tutorials',
-      description: 'Curated list of HTML tutorials on YouTube',
-      tag: 'YouTube',
-      href: '/yt/html'
-    },
+  //Connect to MongoDB
+  const client = new MongoClient(process.env.MONGO_DB_URI as string);
+  await client.connect();
+  const db = client.db();
 
-    {
-      id: 'html2',
-      icon: '📃',
-      title: 'HTML Cheatsheet',
-      description: 'Quick reference to the most commonly used HTML tags',
-      tag: 'Cheatsheet',
-      href: 'https://web.stanford.edu/group/csp/cs21/htmlcheatsheet.pdf'
-    },
-  ]
+  const htmlResource = await db.collection('resources')
+    .find({ topic: 'html' })
+    .toArray() as unknown as Resource[];
 
-  const cssResource = [
-    {
-      id: 'css1',
-      icon: '▶️',
-      title: 'YouTube Tutorials',
-      description: 'Curated list of CSS tutorials on YouTube',
-      tag: 'YouTube',
-      href: '/yt/css'
-    },
 
-    {
-      id: 'css2',
-      icon: '📐',
-      title: 'CSS Shapes',
-      description: 'How to construct impossible shapes with just CSS',
-      tag: 'Cheatsheet',
-      href: 'https://css-tricks.com/the-shapes-of-css/'
-    },
+  const cssResource = await db.collection('resources')
+    .find({ topic: 'css' })
+    .toArray() as unknown as Resource[];
 
-    {
-      id: 'css3',
-      icon: '📖',
-      title: 'Tailwind Docs',
-      description: 'The official site for TailwindCSS. (I refer to it whenever I need to know the Tailwind version of a CSS style)',
-      tag: 'Documentation',
-      href: 'https://tailwindcss.com'
-    },
-  ]
-
-  const jsResource = [
-    {
-      id: 'js1',
-      icon: '▶️',
-      title: 'YouTube Tutorials',
-      description: 'Curated list of JavaScript tutorials on YouTube',
-      tag: 'YouTube',
-      href: '/yt/js'
-    },
-  ]
+  const jsResource = await db.collection('resources')
+    .find({ topic: 'js' })
+    .toArray() as unknown as Resource[];
 
   return (
     <>
